@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Haosama-UI",
-  description: "基于Vue3.0的UI库",
+  description: "基于Vue3.0的UI库 ",
   base: '/haosama-ui/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
