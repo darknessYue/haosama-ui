@@ -8,7 +8,7 @@
     "docs:dev": "pnpm --filter @haosama-ui/docs dev",
     "docs:build": "pnpm --filter @haosama-ui/docs build",
     "docs:preview": "pnpm --filter @haosama-ui/docs preview",
-    "test": "echo 'todo"
+    "test": "echo 'todo'"
   },
   "keywords": [],
   "author": "",
