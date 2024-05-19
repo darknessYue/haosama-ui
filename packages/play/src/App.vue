@@ -2,20 +2,18 @@
 </script>
 
 <template>
-  <hr-button>点击</hr-button>
+  <hr-button :onClick="() => {console.log('click')}" type="primary">按钮</hr-button>
+  <hr-button :onClick="() => {console.log('click')}" type="success">按钮</hr-button>
+  <hr-button :onClick="() => {console.log('click')}" type="danger">按钮</hr-button>
+  <hr-button :onClick="() => {console.log('click')}" type="warning">按钮</hr-button>
+  <hr-button :onClick="() => {console.log('click')}" type="info">按钮</hr-button>
+  <hr-icon icon="spinner" />
+
+  <hr-button-group type="info">
+    <hr-button >按钮1</hr-button>
+    <hr-button >按钮2</hr-button>
+  </hr-button-group>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>

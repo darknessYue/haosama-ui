@@ -1,6 +1,8 @@
-import { HrButton } from "@haosama-ui/components";
+import { HrButton, HrIcon, HrButtonGroup } from "@haosama-ui/components";
 import type { Plugin } from "vue";
 
 export default [
-  HrButton
+  HrButtonGroup,
+  HrButton,
+  HrIcon
 ] as Plugin[];
