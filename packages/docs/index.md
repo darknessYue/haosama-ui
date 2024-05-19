@@ -8,11 +8,11 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速开始
+      link: /get-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 组件
+      link: /components/button
 
 features:
   - title: Feature A
