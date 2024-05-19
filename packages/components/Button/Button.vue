@@ -64,7 +64,10 @@ defineExpose<ButtonInstance>({
       [`hr-button-${type}`]: type,
       [`hr-button-${size}`]: size,
       'is-plain': plain,
-      'is-round': round
+      'is-round': round,
+      'is-circle': circle,
+      'is-disabled': disabled,
+      'is-loading': loading,
     }"
     :autofocus="autofocus"
     :disabled="disabled || loading ? true : void 0"
