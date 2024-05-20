@@ -45,9 +45,6 @@
   p, .vp-doc p {
     margin:  0;
   }
-  p:first-child, .vp-doc p:first-child {
-    margin-bottom: -16px;
-  }
   .vitepress-demo-preview__element-plus__container>.vitepress-demo-preview-preview {
     padding: 20px 20px 10px;
   }
