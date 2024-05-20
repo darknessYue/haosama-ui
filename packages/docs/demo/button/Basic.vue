@@ -42,10 +42,10 @@
     margin-left: 0!important;
     margin-bottom: 16px;
   }
-  p {
+  p, .vp-doc p {
     margin:  0;
   }
-  p:first-child {
+  p:first-child, .vp-doc p:first-child {
     margin-bottom: -16px;
   }
   .vitepress-demo-preview__element-plus__container>.vitepress-demo-preview-preview {
