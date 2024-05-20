@@ -35,3 +35,20 @@
       <hr-button type="danger" icon="trash" circle />
     </p>
   </template>
+
+<style>
+  .hr-button {
+    margin-right: 10px;
+    margin-left: 0!important;
+    margin-bottom: 16px;
+  }
+  p {
+    margin:  0;
+  }
+  p:first-child {
+    margin-bottom: -16px;
+  }
+  .vitepress-demo-preview__element-plus__container>.vitepress-demo-preview-preview {
+    padding: 20px 20px 10px;
+  }
+</style>
