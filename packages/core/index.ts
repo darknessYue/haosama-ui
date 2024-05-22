@@ -7,5 +7,5 @@ import '@haosama-ui/theme/index.css';
 library.add(fas);
 const installer = makeInstaller(components);
 
-export * from "@haosama-ui/components";
 export default installer;
+export * from "@haosama-ui/components";
