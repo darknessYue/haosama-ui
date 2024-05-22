@@ -11,7 +11,7 @@ import {
   text
 } from "./chunk-5FUJSMQ4.js";
 
-// ../../node_modules/.pnpm/@fortawesome+vue-fontawesome@3.0.6_@fortawesome+fontawesome-svg-core@6.5.1_vue@3.4.21/node_modules/@fortawesome/vue-fontawesome/index.es.js
+// ../../node_modules/.pnpm/@fortawesome+vue-fontawesome@3.0.6_@fortawesome+fontawesome-svg-core@6.5.1_vue@3.4.21_typescript@5.4.5_/node_modules/@fortawesome/vue-fontawesome/index.es.js
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {

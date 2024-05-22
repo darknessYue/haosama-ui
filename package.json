@@ -9,20 +9,25 @@
     "docs:dev": "pnpm --filter @haosama-ui/docs dev",
     "docs:build": "pnpm --filter @haosama-ui/docs build",
     "docs:preview": "pnpm --filter @haosama-ui/docs preview",
-    "test": "pnpm --filter @haosama-ui/components test"
+    "test": "pnpm --filter @haosama-ui/components test",
+    "build": "pnpm --filter haosama-ui build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@popperjs/core": "^2.11.8",
+    "async-validator": "^4.2.",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.11.20",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "move-file-cli": "^3.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
@@ -34,11 +39,11 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vue": "^3.4.19",
-    "haosama-ui": "workspace:*",
     "@haosama-ui/hooks": "workspace:*",
+    "@haosama-ui/theme": "workspace:*",
     "@haosama-ui/utils": "workspace:*",
-    "@haosama-ui/theme": "workspace:*"
+    "haosama-ui": "workspace:*",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.4.19"
   }
 }

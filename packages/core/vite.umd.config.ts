@@ -8,22 +8,24 @@ export default defineConfig({
     outDir: 'dist/umd',
     lib: {
       entry: resolve(__dirname, './index.ts'),
-      name: 'HaoComponent',
-      fileName: 'index',
+      name: 'HaosamaUi',
+      fileName: 'haosama-ui',
       formats: ['umd']
     },
     rollupOptions: {
       external: ['vue'],
       output: {
-        exports: 'named',
+        exports: "named",
         globals: {
-          vue: 'Vue'
+          vue: "Vue",
         },
-        assetFileNames: (assetInfo) => {
-          if(assetInfo.name === 'style.css') return 'index.css';
-          return assetInfo.name as string;
-        }
-      }
+        assetFileNames: (chunkInfo) => {
+          if (chunkInfo.name === "style.css") {
+            return "index.css";
+          }
+          return chunkInfo.name as string;
+        },
+      },
     }
   }
 });
