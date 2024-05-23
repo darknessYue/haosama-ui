@@ -2,6 +2,7 @@
 import type { Meta, StoryObj, ArgTypes } from "@storybook/vue3";
 import { expect, fn, userEvent, within } from '@storybook/test';
 import {HrButton, HrButtonGroup } from "haosama-ui"
+import 'haosama-ui/dist/index.css'
 
 type Story = StoryObj<typeof HrButton> & { argTypes?: ArgTypes }
 
