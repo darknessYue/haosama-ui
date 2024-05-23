@@ -1,6 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import { type App } from "vue";
-import HaosamaUI from "haosama-ui";
+import HaosamaUI from "../../../core/index";
 import 'haosama-ui/dist/index.css'
 import { ElementPlusContainer } from "@vitepress-demo-preview/component";
 
