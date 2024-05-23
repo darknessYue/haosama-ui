@@ -10,7 +10,8 @@
     "docs:build": "pnpm --filter @haosama-ui/docs build",
     "docs:preview": "pnpm --filter @haosama-ui/docs preview",
     "test": "pnpm --filter @haosama-ui/components test",
-    "build": "pnpm --filter haosama-ui build"
+    "build": "pnpm --filter haosama-ui build",
+    "release": "pnpm --filter haosama-ui release"
   },
   "keywords": [],
   "author": "",
