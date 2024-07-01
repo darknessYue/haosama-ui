@@ -1,7 +1,7 @@
 ---
 search: false
 ---
-# 最新 Vue3 + TS 组件库
+#  Vue3 + TS 组件库
 
 ## 安装
 

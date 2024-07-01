@@ -88,3 +88,7 @@ hr {
   border: 0;
   border-top: 1px solid var(--er-border-color-lighter);
 }
+
+ul,ol,dl {
+  list-style: none;
+}

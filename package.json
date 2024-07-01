@@ -6,11 +6,16 @@
   "scripts": {
     "dev": "pnpm --filter @haosama-ui/play dev",
     "story": "pnpm --filter @haosama-ui/play storybook",
-    "docs:dev": "pnpm --filter @haosama-ui/docs dev",
-    "docs:build": "pnpm --filter @haosama-ui/docs build",
+    "docs:dev": "cross-env NODE_ENV=development pnpm --filter @haosama-ui/docs dev",
+    "docs:build": "cross-env NODE_ENV=production pnpm build && pnpm --filter @haosama-ui/docs build",
     "docs:preview": "pnpm --filter @haosama-ui/docs preview",
-    "test": "pnpm --filter @haosama-ui/components test",
-    "build": "pnpm --filter haosama-ui build",
+    "test": "cross-env NODE_ENV=test pnpm --filter @haosama-ui/components test",
+    "build": "run-s build-hooks build-components",
+    "build-hooks": "cross-env NODE_ENV=production pnpm --filter @haosama-ui/hooks build",
+    "build-components": "cross-env NODE_ENV=production pnpm --filter haosama-ui build",
+    "build:dev": "run-s build-hooks:dev build-components:dev",
+    "build-components:dev": "cross-env NODE_ENV=development pnpm --filter haosama-ui build:watch",
+    "build-hooks:dev": "cross-env NODE_ENV=development pnpm --filter @haosama-ui/hooks build",
     "release": "pnpm --filter haosama-ui release"
   },
   "keywords": [],
@@ -27,6 +32,7 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
     "async-validator": "^4.2.5",
+    "cross-env": "^7.0.3",
     "move-file-cli": "^3.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-color-mix": "^1.1.0",
@@ -46,8 +52,11 @@
     "@haosama-ui/hooks": "workspace:*",
     "@haosama-ui/theme": "workspace:*",
     "@haosama-ui/utils": "workspace:*",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/shelljs": "^0.8.15",
     "haosama-ui": "workspace:*",
     "lodash-es": "^4.17.21",
+    "shelljs": "^0.8.5",
     "vue": "^3.4.19"
   }
 }
