@@ -36,14 +36,14 @@ describe("Collapse.vue", () => {
       ),
       {
         global: {
-          stubs: ["ErIcon"],
+          stubs: ["HrIcon"],
         },
         attachTo: document.body, // 最新版本 jsdom 更新缓存 bug
       }
     );
 
-    headers = wrapper.findAll(".er-collapse-item__header");
-    contents = wrapper.findAll(".er-collapse-item__wapper");
+    headers = wrapper.findAll(".hr-collapse-item__header");
+    contents = wrapper.findAll(".hr-collapse-item__wapper");
 
     firstHeader = headers[0];
     secondHeader = headers[1];
@@ -118,14 +118,14 @@ describe("Collapse.vue", () => {
       ),
       {
         global: {
-          stubs: ["ErIcon"],
+          stubs: ["HrIcon"],
         },
         attachTo: document.body,
       }
     );
 
-    headers = wrapper.findAll(".er-collapse-item__header");
-    contents = wrapper.findAll(".er-collapse-item__wapper");
+    headers = wrapper.findAll(".hr-collapse-item__header");
+    contents = wrapper.findAll(".hr-collapse-item__wapper");
 
     firstHeader = headers[0];
     secondHeader = headers[1];
@@ -158,7 +158,7 @@ describe("Collapse.vue", () => {
       ),
       {
         global: {
-          stubs: ["ErIcon"],
+          stubs: ["HrIcon"],
         },
       }
     );
@@ -166,7 +166,8 @@ describe("Collapse.vue", () => {
       `
         [
           [
-            [ErUIError: [ErCollapse] accordion mode should only have one active item],
+            "HrCollapse",
+            "accordion mode should only have one active item",
           ],
         ]
       `

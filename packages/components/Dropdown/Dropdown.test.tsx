@@ -59,7 +59,7 @@ describe("Dropdown.vue", () => {
     });
 
     expect(wrapper.text()).toContain("Default slot content");
-    expect(wrapper.find(".er-dropdown").exists()).toBeTruthy();
+    expect(wrapper.find(".hr-dropdown").exists()).toBeTruthy();
   });
 
   it("should emit command event when item is clicked", async () => {
@@ -85,7 +85,7 @@ describe("Dropdown.vue", () => {
     triggerArea.trigger("click");
     await vi.runAllTimers();
 
-    expect(wrapper.find(".er-dropdown__menu").exists()).toBeTruthy();
+    expect(wrapper.find(".hr-dropdown__menu").exists()).toBeTruthy();
     await wrapper.findAll("li").at(0)?.trigger("click");
     expect(onCommand).toBeCalledTimes(0); // disabled
 
@@ -117,7 +117,7 @@ describe("Dropdown.vue", () => {
     triggerArea.trigger("click");
     await vi.runAllTimers();
 
-    expect(wrapper.find(".er-dropdown__menu").exists()).toBeFalsy();
+    expect(wrapper.find(".hr-dropdown__menu").exists()).toBeFalsy();
     expect(onClick).toBeCalled();
   });
 

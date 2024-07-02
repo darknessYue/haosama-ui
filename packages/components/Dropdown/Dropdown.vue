@@ -78,7 +78,7 @@ provide<DropdownContext>(DROPDOWN_CTX_KEY, {
       <slot v-else name="default"></slot>
 
       <template #content>
-        <ul class="er-dropdown__menu">
+        <ul class="hr-dropdown__menu">
           <slot name="dropdown">
             <template
               v-for="item in items"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { createPopper, type Instance } from "@popperjs/core";
-import { ref, watch, watchEffect, onUnmounted, computed, type Ref } from "vue";
+import { ref, watch, watchEffect, onUnmounted, computed, type Ref, onMounted } from "vue";
 import { bind, debounce, type DebouncedFunc } from "lodash-es";
 import { useClickOutside } from "@haosama-ui/hooks";
 
@@ -137,10 +137,12 @@ const hide: TooltipInstance["hide"] = function () {
   setVisible(false);
 };
 
-useClickOutside(containerNode, () => {
-  emits("click-outside");
-  if (props.trigger === "hover" || props.manual) return;
-  visible.value && closeFinal();
+onMounted(() => {
+  useClickOutside(containerNode, () => {
+    emits("click-outside");
+    if (props.trigger === "hover" || props.manual) return;
+    visible.value && closeFinal();
+  });
 });
 
 watch(
