@@ -10,15 +10,21 @@ prev:
 # Tooltip 文字提示
 
 文字提示，在鼠标 hover 时显示提示文字。
-
+<!-- 
 ::: tip
 todo: 目前只是做了简单封装，待完善(effect 部分)
-:::
+::: -->
 
 ## 基础用法
 
 ::: preview
 demo-preview=../demo/tooltip/Basic.vue
+:::
+
+## 点击展示
+
+::: preview
+demo-preview=../demo/tooltip/Click.vue
 :::
 
 ## 更多内容的文字提示

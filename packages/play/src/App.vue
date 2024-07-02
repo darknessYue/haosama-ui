@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const change = (visible: boolean) => {
+  console.log(visible)
+}
 </script>
 
 <template>
@@ -13,6 +16,18 @@
     <hr-button >按钮1</hr-button>
     <hr-button >按钮2</hr-button>
   </hr-button-group>
+
+  
+  <div>
+    <div id="outside"></div>
+    <hr-tooltip
+      content="hello tooltip"
+      trigger="click"
+      onVisibleChange={{ change }}
+    >
+      <button id="trigger">trigger</button>
+    </hr-tooltip>
+  </div>
 </template>
 
 <style scoped>

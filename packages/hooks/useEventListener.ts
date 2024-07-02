@@ -8,18 +8,33 @@ import {
 } from "vue";
 
 export default function useEventListener(
-  target: MaybeRef<EventTarget | HTMLElement | void>,
+  target: MaybeRef<EventTarget | HTMLElement | void | string>,
   event: string,
   handler: (e: Event) => any
 ) {
   if (isRef(target)) {
     watch(target, (val, oldVal) => {
-      oldVal?.removeEventListener(event, handler);
-      val?.addEventListener(event, handler);
+      if(typeof oldVal !== 'string') {
+        oldVal?.removeEventListener(event, handler);
+      }
+      if(typeof val !== 'string') {
+        val?.addEventListener(event, handler);
+      }
     });
   } else {
-    onMounted(() => target?.addEventListener(event, handler));
+    onMounted(() => {
+      let t = target === 'document' ? document : target;
+      if(typeof t !== 'string') {
+        return t?.addEventListener(event, handler)
+      }
+    });
   }
 
-  onBeforeUnmount(() => unref(target)?.removeEventListener(event, handler));
+  onBeforeUnmount(() => {
+    let t = target === 'document' ? document : target;
+    const nt = unref(t)
+    if(typeof nt !== 'string') {
+      nt?.removeEventListener(event, handler)
+    }
+  });
 }
