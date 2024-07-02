@@ -12,8 +12,8 @@ const dropdownRef = ref<DropdownInstance>();
 </script>
 
 <template>
-  <er-button @click="() => dropdownRef?.open()">open</er-button>
-  <er-button @click="() => dropdownRef?.close()">close</er-button>
+  <hr-button @click="() => dropdownRef?.open()">open</hr-button>
+  <hr-button @click="() => dropdownRef?.close()">close</hr-button>
   <br />
   <hr-dropdown ref="dropdownRef" :items="items">
     <span class="dropdown-link">

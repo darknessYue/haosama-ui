@@ -2,7 +2,7 @@
 import {
   type DropdownItemProps,
   type DropdownCommand,
-  // HrMessage,
+  HrMessage,
 } from "haosama-ui";
 
 const items: DropdownItemProps[] = [
@@ -13,7 +13,7 @@ const items: DropdownItemProps[] = [
 ];
 
 function handleCommand(command: DropdownCommand) {
-  // HrMessage.info("click on item " + command);
+  HrMessage.info("click on item " + command);
 }
 </script>
 

@@ -1,0 +1,79 @@
+.hr-message {
+  --er-message-bg-color: var(--er-color-info-light-9);
+  --er-message-border-color: var(--er-border-color-lighter);
+  --er-message-padding: 15px 19px;
+  --er-message-close-size: 16px;
+  --er-message-close-icon-color: var(--er-text-color-placeholder);
+  --er-message-close-hover-color: var(--er-text-color-secondary);
+  --er-message-icon-size: 16px;
+  --er-message-icon-margin: 8px;
+}
+
+.hr-message {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  border-radius: var(--er-border-radius-base);
+  border-width: var(--er-border-width);
+  border-style: var(--er-border-style);
+  border-color: var(--er-message-border-color);
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: var(--er-message-bg-color);
+  padding: var(--er-message-padding);
+  display: flex;
+  align-items: center;
+  transition: top var(--er-transition-duration), opacity var(--er-transition-duration),
+    transform var(--er-transition-duration);
+  .hr-message__icon {
+    color: var(--er-message-text-color);
+    font-size: var(--er-message-icon-size);
+    width: var(--er-message-icon-size);
+    margin-right: var(--er-message-icon-margin);
+  }
+  .hr-message__content {
+    color: var(--er-message-text-color);
+    overflow-wrap: break-word;
+  }
+  &.is-close .hr-message__content {
+    padding-right: 10px;
+  }
+  &.text-center {
+    justify-content: center;
+  }
+  .hr-message__close {
+    display: flex;
+    align-items: center;
+  }
+  .hr-message__close .hr-icon {
+    cursor: pointer;
+  }
+}
+
+@each $val in info, success, warning, danger {
+  .hr-message--$(val) {
+    --er-message-bg-color: var(--er-color-$(val)-light-9);
+    --er-message-border-color: var(--er-color-$(val)-light-8);
+    --er-message-text-color: var(--er-color-$(val));
+    .hr-message__close {
+      --er-icon-color: var(--er-color-$(val));
+    }
+  }
+}
+
+.hr-message--error {
+  --er-message-bg-color: var(--er-color-danger-light-9);
+  --er-message-border-color: var(--er-color-danger-light-8);
+  --er-message-text-color: var(--er-color-danger);
+  .hr-message__close {
+    --er-icon-color: var(--er-color-danger);
+  }
+}
+
+.hr-message.fade-up-enter-from,
+.hr-message.fade-up-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

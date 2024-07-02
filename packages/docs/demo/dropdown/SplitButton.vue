@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { 
   type DropdownItemProps, 
-  // HrMessage 
+  HrMessage 
 } from "haosama-ui";
 
 const items: DropdownItemProps[] = [
@@ -12,17 +12,17 @@ const items: DropdownItemProps[] = [
 ];
 
 function handleClick() {
-  // HrMessage.info("button click");
+  HrMessage.info("button click");
 }
 </script>
 
 <template>
   <div class="row">
     <hr-dropdown :items="items">
-      <er-button type="primary">
+      <hr-button type="primary">
         Dropdown List
         <hr-icon icon="angle-down" style="margin-left: 8px" />
-      </er-button>
+      </hr-button>
     </hr-dropdown>
     <hr-dropdown
       :items="items"

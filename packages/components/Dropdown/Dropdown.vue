@@ -49,6 +49,7 @@ provide<DropdownContext>(DROPDOWN_CTX_KEY, {
   handleItemClick,
   size: computed(() => props.size),
 });
+
 </script>
 
 <template>

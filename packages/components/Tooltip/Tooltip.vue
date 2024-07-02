@@ -143,7 +143,6 @@ useClickOutside(containerNode, () => {
   visible.value && closeFinal();
 });
 
-
 watch(
   visible,
   (val) => {
